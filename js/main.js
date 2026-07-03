@@ -112,10 +112,10 @@ if (yearElement) {
 console.log("BIGULE Website Loaded Successfully");
 document.addEventListener('DOMContentLoaded',()=>{
 const b=document.querySelector('.menu-toggle');
-const n=document.querySelector('nav');
+const n=document.querySelector('.nav-menu');
 if(b&&n){
- b.onclick=()=>{n.classList.toggle('open');b.textContent=n.classList.contains('open')?'✕':'☰';};
- n.querySelectorAll('a').forEach(a=>a.onclick=()=>{if(window.innerWidth<=768){n.classList.remove('open');b.textContent='☰';}});
+b.onclick=()=>{n.classList.toggle('open');b.textContent=n.classList.contains('open')?'✕':'☰';};
+document.querySelectorAll('.nav-menu a').forEach(a=>a.onclick=()=>{n.classList.remove('open');b.textContent='☰';});
 }
-window.addEventListener('scroll',()=>{document.querySelector('header').classList.toggle('scrolled',window.scrollY>10);});
+window.addEventListener('scroll',()=>{const h=document.querySelector('header');if(window.scrollY>10)h.classList.add('scrolled');else h.classList.remove('scrolled');});
 });
