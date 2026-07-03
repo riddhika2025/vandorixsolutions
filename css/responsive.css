@@ -155,3 +155,13 @@ body{
 }
 
 }
+
+@media (max-width:768px){
+header .container{flex-direction:row;padding:12px 0;min-height:70px}
+.logo{text-align:left}
+.menu-toggle{display:block}
+nav{display:none;width:100%}
+nav.open{display:block;animation:fade .25s ease}
+nav ul{flex-direction:column;margin-top:15px;align-items:flex-start;padding-bottom:10px}
+}
+@keyframes fade{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}

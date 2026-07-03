@@ -456,3 +456,7 @@ footer{
     margin-top:60px;
 
 }
+
+/* Mobile menu */
+.menu-toggle{display:none;background:none;border:0;font-size:2rem;cursor:pointer;color:#0067B8}
+header.scrolled{box-shadow:0 2px 12px rgba(0,0,0,.08)}
