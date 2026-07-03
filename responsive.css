@@ -2,6 +2,10 @@
    responsive.css
 ========================================== */
 
+/* ===========================
+   Tablet
+=========================== */
+
 @media (max-width:1024px){
 
 .hero-grid{
@@ -21,18 +25,11 @@
     margin-top:20px;
 }
 
-header .container{
-    flex-direction:column;
-    padding:20px 0;
 }
 
-nav ul{
-    margin-top:15px;
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-}
+/* ===========================
+   Mobile
+=========================== */
 
 @media (max-width:768px){
 
@@ -40,21 +37,83 @@ nav ul{
     width:92%;
 }
 
+/* ---------- Header ---------- */
+
+header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-direction:row;
+    position:relative;
+    padding:15px 0;
+}
+
 .logo{
-    text-align:center;
+    text-align:left;
 }
 
 .logo h1{
-    font-size:1.8rem;
+    font-size:1.6rem;
 }
 
-nav ul{
-    gap:15px;
+.logo span{
+    font-size:.9rem;
 }
 
-nav a{
-    font-size:.95rem;
+/* ---------- Hamburger ---------- */
+
+.menu-toggle{
+    display:block;
+    background:none;
+    border:none;
+    font-size:32px;
+    cursor:pointer;
+    color:#222;
 }
+
+/* ---------- Navigation ---------- */
+
+.nav-menu{
+    display:none;
+    position:absolute;
+    top:72px;
+    left:0;
+    width:100%;
+    background:#ffffff;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    z-index:999;
+}
+
+.nav-menu.open{
+    display:block;
+}
+
+.nav-menu ul{
+    display:flex;
+    flex-direction:column;
+    list-style:none;
+    margin:0;
+    padding:15px 0;
+    gap:0;
+}
+
+.nav-menu ul li{
+    text-align:center;
+    border-bottom:1px solid #eee;
+}
+
+.nav-menu ul li:last-child{
+    border-bottom:none;
+}
+
+.nav-menu ul li a{
+    display:block;
+    padding:15px;
+    text-decoration:none;
+    color:#222;
+}
+
+/* ---------- Hero ---------- */
 
 .hero{
     padding:60px 0;
@@ -110,17 +169,11 @@ footer{
 
 }
 
+/* ===========================
+   Small Mobile
+=========================== */
+
 @media (max-width:480px){
-
-header .container{
-    min-height:auto;
-}
-
-nav ul{
-    flex-direction:column;
-    align-items:center;
-    gap:10px;
-}
 
 .hero-left h1{
     font-size:2.4rem;
